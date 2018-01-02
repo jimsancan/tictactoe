@@ -1,3 +1,5 @@
+var prompt = require('prompt');
+
 var board = {
   1: '1',
   2: '2',
@@ -16,4 +18,12 @@ function printBoard() {
   ` ${board[7]}  | ${board[8]} |  ${board[9]}\n`)
 }
 
-printBoard();
+
+prompt.start();
+
+prompt.get(['number'])
+
+//put this in the game function later 
+// printBoard();
+
+//need next turn function that alternates 
