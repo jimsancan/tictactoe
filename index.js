@@ -32,7 +32,13 @@ function togglePlayer() {
 
 prompt.start();
 printBoard();
-prompt.get(['number'])
+prompt.get(['number'], function(err, result) {
+  for (var key in board) {
+    if (result.number === key) {
+      board.key = 'x'
+    }
+  }
+})
 
 
 //put this in the game function later 
