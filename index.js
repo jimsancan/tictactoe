@@ -1,5 +1,9 @@
 var prompt = require('prompt');
 
+var playerOne = '1'
+var playerTwo = '2'
+var currentPlayer = '1'
+
 var board = {
   1: '1',
   2: '2',
@@ -18,10 +22,18 @@ function printBoard() {
   ` ${board[7]}  | ${board[8]} |  ${board[9]}\n`)
 }
 
+function togglePlayer() {
+  if (currentPlayer === '1') {
+    currentPlayer = '2'
+  } else {
+    currentPlayer = '1'
+  }
+}
 
 prompt.start();
-
+printBoard();
 prompt.get(['number'])
+
 
 //put this in the game function later 
 // printBoard();
